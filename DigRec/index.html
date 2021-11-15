@@ -191,7 +191,7 @@
             for (index = 0; index < predictedValues.length; index++) {
                 if (predictedValues[index] > 0.5) {
                     isThereAnyPrediction = true;
-                    document.getElementById('rightside').innerHTML = '<br/>Predicted Number: ' + index;
+                    document.getElementById('rightside').innerHTML = '<br/>Angka Prediksi: ' + index;
                 }
             }
             if (!isThereAnyPrediction) {
@@ -260,11 +260,11 @@
 
 <body onload="init()">
     <div id="mnistapp">
-        <h4 style="margin-left: 10px;">Draw a number in the left-hand box</h4>
+        <h4 style="margin-left: 10px;">Gambarkan Angka di Box Kiri, Hasil Prediksi akan ada di kanan</h4>
         <div class="leftside">
             <canvas id="sketchpad" height="140" width="140"></canvas>
             <input type="submit" value="Predict" id="predictbutton" onclick="predict();">
-            <input type="submit" value="Clear" id="clearbutton" onclick="clearCanvas(canvas,ctx);">
+            <input type="submit" value="Clear !" id="clearbutton" onclick="clearCanvas(canvas,ctx);">
         </div>
         <div id="rightside" class="rightside">
         </div>
