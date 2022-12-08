@@ -13,7 +13,7 @@ function preload() {
   detector = ml5.objectDetector('cocossd');
 }
 
-/*
+
 function setup() {
   createCanvas(640, 480);
   video = createCapture(VIDEO);
@@ -25,8 +25,8 @@ function setup() {
     }
   });
 }
-*/
 
+/*
 function setup() {
   createCanvas(640, 480);
   var constraints = {
@@ -50,6 +50,7 @@ function setup() {
   
   //capture.hide();
 }
+*/
 
 function draw() {
   if (!video || !detecting) return;
