@@ -50,7 +50,7 @@ function drawLabel(object) {
   fill('orange');
   textSize(24);
   text(object.label, object.x + 10, object.y + 24);
-  text(nf(object.confidence*100,2,2),"%", object.x + 10, object.y + 48);
+  text(nf(object.confidence*100,2,2), object.x + 10, object.y + 48);
 }
 
 // callback function. it is called when object is detected
