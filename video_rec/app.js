@@ -13,6 +13,7 @@ function preload() {
   detector = ml5.objectDetector('cocossd');
 }
 
+/*
 function setup() {
   createCanvas(640, 480);
   video = createCapture(VIDEO);
@@ -23,6 +24,26 @@ function setup() {
       document.body.style.cursor = 'default';
     }
   });
+}
+*/
+
+function setup() {
+  createCanvas(640, 480);
+  var constraints = {
+    audio: false,
+    video: {
+      facingMode: {
+        exact: "environment"
+      }
+    }    
+    //video: {
+      //facingMode: "user"
+    //} 
+  };
+  capture = createCapture(constraints);
+  video.size(640, 480);
+  
+  capture.hide();
 }
 
 function draw() {
