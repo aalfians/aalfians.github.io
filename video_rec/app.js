@@ -15,7 +15,15 @@ function preload() {
 
 function setup() {
   createCanvas(640, 480);
-  video = createCapture(VIDEO);
+  var constraints = {
+  audio: false,
+  video: {
+     facingMode: {
+        exact: "environment"
+      }
+    }    
+  };
+  video = createCapture(constrain);
   video.size(640, 480);
   console.log('video element is created');
   video.elt.addEventListener('loadeddata', function() {
@@ -50,7 +58,7 @@ function drawLabel(object) {
   fill('orange');
   textSize(24);
   text(object.label, object.x + 10, object.y + 24);
-  text(nf(object.confidence*100,2,2),"%", object.x + 10, object.y + 48);
+  text(nf(object.confidence*100,2,2), object.x + 10, object.y + 48);
 }
 
 // callback function. it is called when object is detected
