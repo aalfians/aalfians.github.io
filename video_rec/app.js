@@ -23,7 +23,7 @@ function setup() {
       }
     }    
   };
-  video = createCapture(constrain);
+  video = createCapture(constraints);
   video.size(640, 480);
   console.log('video element is created');
   video.elt.addEventListener('loadeddata', function() {
