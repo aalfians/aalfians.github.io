@@ -42,8 +42,13 @@ function setup() {
   };
   capture = createCapture(constraints);
   video.size(640, 480);
+  video.elt.addEventListener('loadeddata', function() {
+    if (video.elt.readyState >= 2) {
+      document.body.style.cursor = 'default';
+    }
+
   
-  capture.hide();
+  //capture.hide();
 }
 
 function draw() {
